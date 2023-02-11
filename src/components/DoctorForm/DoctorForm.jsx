@@ -91,11 +91,11 @@ const DoctorForm = ({ authToken, isLoggedIn, setToken, setLoggedIn }) => {
           <span className="underline  decoration-8  underline-offset-4 decoration-fuchsia-600 text-black">
             {authToken}
           </span>
-          😍
+          
         </h1>
       ) : (
         <h1 className="  text-red-500 font-bold animate-pulse text-3xl mt-5">
-          Please Connect with MetaMask 
+          Please Connect with MetaMask 🐺
         </h1>
       )}
     </div>
