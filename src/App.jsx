@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import Home from "./pages/Home/Home";
 
-import CertificateGen from "./components/CertificateGen/CertificateGen";
 import {
   Route,
   BrowserRouter as Router,
@@ -12,6 +11,7 @@ import {
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Landing from "./pages/Landing/Landing";
 import About from "./pages/About/About";
+import CertificateGen from "./components/CertificateGen/CertificateGen";
 
 function App() {
   const user = localStorage.getItem("token");
@@ -23,6 +23,7 @@ function App() {
           <Route path="/about" exact element={<About />} />
           <Route path="/dashboard" exact element={<Dashboard />} />
           <Route path="/login" exact element={<Home />} />
+          <Route path="/certificate" exact element={<CertificateGen />} />
         </Routes>
       </Router>
     </>

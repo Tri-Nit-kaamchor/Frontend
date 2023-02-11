@@ -18,11 +18,30 @@ const Navbar = ({ authToken, isLoggedIn, setToken, setLoggedIn }) => {
         <h4 className="font-playfair text-3xl font-bold">Certi FY </h4>
         {isAboveSmallScreens ? (
           <div className="flex items-center text-center justify-between gap-16 font-opensans text-sm font-semibold text-white ">
-            <Link to="/" className="text-xl text-black">Home </Link>
-            {isLoggedIn ? <Link to="/dashboard" className="text-xl text-black">Dashboard </Link> : ""}
-            <Link to="/about" className="text-xl text-black">About </Link>
-            <Link to="/login" className="text-xl text-black">Login</Link>
-            {authToken ? <h1 className="text-black">{authToken}</h1> : <div className="text-black">NotloggedIn</div>}
+            <Link to="/" className="text-xl text-black">
+              Home{" "}
+            </Link>
+            {isLoggedIn ? (
+              <Link to="/dashboard" className="text-xl text-black">
+                Dashboard{" "}
+              </Link>
+            ) : (
+              ""
+            )}
+            <Link to="/about" className="text-xl text-black">
+              About{" "}
+            </Link>
+            <Link to="/login" className="text-xl text-black">
+              Login
+            </Link>
+            <Link to="/certificate" className="text-xl text-black">
+              Certify
+            </Link>
+            {authToken ? (
+              <h1 className="text-black">{authToken}</h1>
+            ) : (
+              <div className="text-black">NotloggedIn</div>
+            )}
             {isLoggedIn ? (
               <button
                 className="text-white  font-bold px-5 py-3 bg-red-500 hover:bg-red-700 transition-colors duration-150 rounded-lg"

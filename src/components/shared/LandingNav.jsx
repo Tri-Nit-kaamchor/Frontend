@@ -11,9 +11,18 @@ const LandingNav = () => {
         <h4 className="font-playfair text-3xl font-bold">Certi FY </h4>
         {isAboveSmallScreens ? (
           <div className="flex items-center text-center justify-between gap-16 font-opensans text-sm font-semibold text-white ">
-            <Link to="/" className="text-xl text-black">Home </Link>
-            <Link to="/about" className="text-xl text-black">About</Link>
-            <Link to="/login" className="text-xl text-black">Login</Link>
+            <Link to="/" className="text-xl text-black">
+              Home
+            </Link>
+            <Link to="/about" className="text-xl text-black">
+              About
+            </Link>
+            <Link to="/login" className="text-xl text-black">
+              Login
+            </Link>
+            <Link to="/certificate" className="text-xl text-black">
+              Certify
+            </Link>
           </div>
         ) : (
           <>Small screen</>
