@@ -85,9 +85,17 @@ const DoctorForm = ({ authToken, isLoggedIn, setToken, setLoggedIn }) => {
         </button>
       </form>
       {isLoggedIn ? (
-        <h1>{authToken}</h1>
+        <h1 className="text-2xl mt-10 font-bold text-purple-500">
+          Hi{" "}
+          <span className="underline  decoration-8  underline-offset-4 decoration-fuchsia-600 text-black">
+            {authToken}
+          </span>
+          😍
+        </h1>
       ) : (
-        <h1>please be less "Diverse🦄" and login properly</h1>
+        <h1 className="  text-red-500 font-bold animate-pulse text-3xl mt-5">
+          What pa cant even LOGIN properly !! 😒
+        </h1>
       )}
     </div>
   );
