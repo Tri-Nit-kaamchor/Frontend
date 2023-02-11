@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import Home from "./pages/Home/Home";
+
+import CertificateGen from "./components/CertificateGen/CertificateGen";
 import {
   Route,
   BrowserRouter as Router,
