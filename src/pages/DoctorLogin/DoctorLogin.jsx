@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 
 const DoctorLogin = () => {
   return (
-    <div>DoctorLogin</div>
-  )
-}
+    <>
+      <div className="h-[100vh] flex flex-row justify-center items-center">
+        DoctorLogin
+      </div>
+      ;
+    </>
+  );
+};
 
-export default DoctorLogin
+export default DoctorLogin;

@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useState } from "react";
+import DoctorForm from "../../components/DoctorForm/DoctorForm";
+import Navbar from "../../components/shared/Navbar";
 
 const Home = () => {
+  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [token, setToken] = useState("");
+  console.log(`home is logged : ${isLoggedIn}`);
   return (
-    <div className='text-3xl font-bold bg-red-200'>Home</div>
-  )
-}
+    <>
+      <Navbar
+        setToken={setToken}
+        setLoggedIn={setLoggedIn}
+        isLoggedIn={isLoggedIn}
+        authToken={token}
+      />
 
-export default Home
+
+      <DoctorForm
+        setToken={setToken}
+        setLoggedIn={setLoggedIn}
+        isLoggedIn={isLoggedIn}
+        authToken={token}
+      />
+    </>
+  );
+};
+
+export default Home;
