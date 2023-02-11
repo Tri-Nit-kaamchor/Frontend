@@ -6,7 +6,7 @@ const Dashboard = () => {
     <>
       <Navbar />
       <h1>meow</h1>
-      {user ? <div>DASHBOARD</div> : <div>LOGIN FIRST PA</div>}
+      {user ? <div className="mt-20 mx-5">DASHBOARD</div> : <div>LOGIN FIRST PA</div>}
     </>
   );
 };

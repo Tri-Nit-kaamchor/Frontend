@@ -40,6 +40,7 @@ const DoctorForm = ({ authToken, isLoggedIn, setToken, setLoggedIn }) => {
   });
 
   const handleSubmit = async (e) => {
+    handleLogin()
     e.preventDefault();
     console.log(formData);
   };
@@ -56,7 +57,7 @@ const DoctorForm = ({ authToken, isLoggedIn, setToken, setLoggedIn }) => {
           className="p-2 rounded-lg w-full border-2 border-blue-400 "
           type="text"
           name="name"
-          placeholder="name"
+          placeholder="Doctor's Name"
           required
           onChange={handleChange}
         />
@@ -64,7 +65,7 @@ const DoctorForm = ({ authToken, isLoggedIn, setToken, setLoggedIn }) => {
           className="p-2 rounded-lg w-full border-2  border-blue-400"
           type="text"
           name="licNo"
-          placeholder="licNo"
+          placeholder="License Number"
           required
           onChange={handleChange}
         />
@@ -72,12 +73,12 @@ const DoctorForm = ({ authToken, isLoggedIn, setToken, setLoggedIn }) => {
           className="p-2 rounded-lg w-full border-2 border-blue-400"
           name="hospital"
           type="hospital"
-          placeholder="hospital"
+          placeholder="Hospital / Place of Practice"
           required
           onChange={handleChange}
         />
         <button
-          onClick={handleLogin}
+          
           type="submit"
           className="px-6 py-3 bg-orange-400 rounded-lg hover:bg-orange-600 text-black font-semibold"
         >
@@ -94,7 +95,7 @@ const DoctorForm = ({ authToken, isLoggedIn, setToken, setLoggedIn }) => {
         </h1>
       ) : (
         <h1 className="  text-red-500 font-bold animate-pulse text-3xl mt-5">
-          What pa cant even LOGIN properly !! 😒
+          Please Connect with MetaMask 
         </h1>
       )}
     </div>

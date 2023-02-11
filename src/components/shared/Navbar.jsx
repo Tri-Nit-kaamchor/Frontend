@@ -10,19 +10,19 @@ const Navbar = ({ authToken, isLoggedIn, setToken, setLoggedIn }) => {
   };
   useEffect(() => {}, [isLoggedIn]);
 
-  const navBarBackground = "bg-pink-700";
+  const navBarBackground = "bg-white";
   const isAboveSmallScreens = useMediaQuery("(min-width:768px)");
   return (
     <nav className={`${navBarBackground} z-40 w-full fixed top-0 py-[0.6rem] `}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="font-playfair text-3xl font-bold">Doctor guys </h4>
+        <h4 className="font-playfair text-3xl font-bold">CredleyFi </h4>
         {isAboveSmallScreens ? (
           <div className="flex items-center text-center justify-between gap-16 font-opensans text-sm font-semibold text-white ">
-            <Link to="/">Home </Link>
-            {isLoggedIn ? <Link to="/dashboard">Dashboard </Link> : ""}
-            <Link to="/about">About </Link>
-            <Link to="/login">Login</Link>
-            {authToken ? <h1>{authToken}</h1> : <div>NotloggedIn</div>}
+            <Link to="/" className="text-xl text-black">Home </Link>
+            {isLoggedIn ? <Link to="/dashboard" className="text-xl text-black">Dashboard </Link> : ""}
+            <Link to="/about" className="text-xl text-black">About </Link>
+            <Link to="/login" className="text-xl text-black">Login</Link>
+            {authToken ? <h1 className="text-black">{authToken}</h1> : <div className="text-black">NotloggedIn</div>}
             {isLoggedIn ? (
               <button
                 className="text-white  font-bold px-5 py-3 bg-red-500 hover:bg-red-700 transition-colors duration-150 rounded-lg"
