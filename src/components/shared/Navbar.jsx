@@ -15,7 +15,7 @@ const Navbar = ({ authToken, isLoggedIn, setToken, setLoggedIn }) => {
   return (
     <nav className={`${navBarBackground} z-40 w-full fixed top-0 py-[0.6rem] `}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="font-playfair text-3xl font-bold">CredleyFi </h4>
+        <h4 className="font-playfair text-3xl font-bold">Certi FY </h4>
         {isAboveSmallScreens ? (
           <div className="flex items-center text-center justify-between gap-16 font-opensans text-sm font-semibold text-white ">
             <Link to="/" className="text-xl text-black">Home </Link>
